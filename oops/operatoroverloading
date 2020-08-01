@@ -1,0 +1,149 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+./////////////////////////////////////unaryoperator overoading
+#include <iostream>
+
+using namespace std;
+class fun{
+    private:
+        int real;
+    public:
+        fun()
+        {
+            real=0;
+        }
+        fun(int c)
+        {
+        real=c;
+        }
+        void print()
+        {
+            cout<<real<<endl;
+        }
+       void operator ++()//preincrement operator is being overloaded
+       {
+           ++real;
+       }
+       fun operator ++(int)//postincrementoperator
+       {
+           fun x;
+           return x.real++;
+           
+       }
+       fun operator --()//predecrement operator is being overloaded
+       {
+           fun x;
+           --x.real;
+           return x;
+           
+       }
+       fun operator --(int)//postdecrement
+       {
+           fun x;
+           return x.real--;
+           
+       }
+};
+int main()
+{
+   // fun f;
+    //int x;
+    //int y;
+    //y=++x;
+    //cout<<y<<x;
+    //overloading pre increment operator
+   // f.print();
+    //++f;
+  //  f.print();
+    //f++;//postincrementoperator
+   // f.print();
+    fun a;
+    fun b,c;
+    b=a++;
+    b.print();
+    
+    
+    
+  //f++;//we should overload post increment operator to work for objects
+    return 0;
+}////////////////////
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+/////////////////////////////////binaryoperator overloading
+#include <iostream>
+
+using namespace std;
+class fun{
+    private:
+        int real;
+    public:
+        fun()
+        {
+            real=0;
+        }
+        fun(int c)
+        {
+        real=c;
+        }
+        void print()
+        {
+            cout<<real<<endl;
+        }
+       void operator ++()//preincrement operator is being overloaded
+       {
+           ++real;
+       }
+       fun operator ++(int)//postincrementoperator
+       {
+           fun x;
+           return x.real++;
+           
+       }
+       fun operator --()//predecrement operator is being overloaded
+       {
+           fun x;
+           --x.real;
+           return x;
+           
+       }
+       fun operator --(int)//postdecrement
+       {
+           fun x;
+           return x.real--;
+           
+       }
+};
+int main()
+{
+   // fun f;
+    //int x;
+    //int y;
+    //y=++x;
+    //cout<<y<<x;
+    //overloading pre increment operator
+   // f.print();
+    //++f;
+  //  f.print();
+    //f++;//postincrementoperator
+   // f.print();
+    fun a;
+    fun b,c;
+    b=a++;
+    b.print();
+    
+    
+    
+  //f++;//we should overload post increment operator to work for objects
+    return 0;
+}
+
